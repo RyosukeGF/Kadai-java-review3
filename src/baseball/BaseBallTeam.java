@@ -6,6 +6,7 @@ public class BaseBallTeam {
     private int win;
     private int lose;
     private int draw;
+    //private double rate;
 
     //引数　なし　コンストラクタ
     public BaseBallTeam() {
@@ -21,25 +22,19 @@ public class BaseBallTeam {
         this.draw = draw;
     }
 
-    /*
-    public double getRate() {
-        double rate = win / (win + lose);
-        return rate;
-    }
-    */
-
-    public void report() {
-        double rate = (double)win / (win + lose);//ここがあまりキレイじゃない
-        System.out.println(name + "の2022年の成績は" +win+ "勝" +lose+ "敗" +draw+ "分、勝率は" + rate + "です。");
-    }
-
-    //getter_setter
-    public String getName() {
-        return name;
-    }
-
+    //値を入れなおさないので、不要。
     public void setName(String name) {
         this.name = name;
     }
+
+       public double getRate() {
+        double rate = (double)win / (win + lose);
+        return rate;
+    }
+
+    public void report() {
+        System.out.println(name + "の2022年の成績は" +win+ "勝" +lose+ "敗" +draw+ "分、勝率は" + getRate() + "です。");
+    }
+
 
 }
