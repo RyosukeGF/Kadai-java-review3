@@ -13,14 +13,12 @@ public class Review3 {
         BaseBallTeam chunichi = new BaseBallTeam("中日ドラゴンズ", 66, 75, 2);
 
 
-
         tokyo.report();
         yokohama.report();
         hanshin.report();
         yomiuri.report();
         hiroshima.report();
         chunichi.report();
-        //引数 rate?
 
     }
 
